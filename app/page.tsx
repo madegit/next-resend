@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AtSign, Github, File, Twitter } from "lucide-react";
 
 export default function Home() {
