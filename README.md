@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Resend Email Sender
 
-## Getting Started
+This is a simple, fast, and secure email sender built with Next.js and Resend. It provides a user-friendly interface for sending emails using the Resend API.
 
-First, run the development server:
+## Features
+
+- Send emails using Resend API
+- WYSIWYG editor for composing email body
+- Responsive design
+- Environment variable configuration for easy setup and deployment
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have a Resend account and API key
+- You have Node.js installed (version 14.x or later)
+- You have npm or yarn installed
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/madegit/next-resend.git
+   cd next-resend
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+
+   Copy the `.env.example` file to `.env.local` and fill in your values:
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Then edit `.env.local` with your actual values:
+
+   ```
+   RESEND_API_KEY=your_resend_api_key_here
+   FROM_EMAIL=your_verified_email@yourdomain.com
+   NEXT_PUBLIC_FROM_EMAIL=your_verified_email@yourdomain.com
+   ```
+
+## Usage
+
+To run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can deploy this app to various platforms. Here are instructions for deploying to Vercel:
 
-## Learn More
+1. Push your code to a GitHub repository.
 
-To learn more about Next.js, take a look at the following resources:
+2. Go to [Vercel](https://vercel.com) and sign up or log in.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Click on "New Project" and import your GitHub repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. In the "Environment Variables" section, add the following variables:
+   - `RESEND_API_KEY`
+   - `FROM_EMAIL`
+   - `NEXT_PUBLIC_FROM_EMAIL`
 
-## Deploy on Vercel
+5. Click "Deploy" and wait for the deployment to complete.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions to this project are welcome. Please ensure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+
+If you have any questions, feel free to reach out to me on Twitter [@madethecreator](https://twitter.com/madethecreator).
